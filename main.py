@@ -1,20 +1,24 @@
 from flask import Flask
-from threading import Thread
 from telegram import Update
-from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+from telegram.ext import (
+    ApplicationBuilder,
+    CommandHandler,
+    ContextTypes
+)
+import threading
+import asyncio
 import os
 
-# TOKEN desde variables de entorno
 TOKEN = os.getenv("TOKEN")
 
-# Servidor web para Render
+# Flask
 app_web = Flask(__name__)
 
 @app_web.route("/")
 def home():
     return "Bot activo ✅"
 
-# Comando /start
+# Telegram
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     mensaje = (
@@ -35,22 +39,27 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         caption=mensaje
     )
 
-# Ejecutar servidor web
-def run_web():
-    port = int(os.environ.get("PORT", 10000))
-    app_web.run(host="0.0.0.0", port=port)
-
-# Ejecutar bot
-def run_bot():
+async def run_bot():
     app = ApplicationBuilder().token(TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))
 
     print("Bot encendido ✅")
 
-    app.run_polling()
+    await app.initialize()
+    await app.start()
+    await app.updater.start_polling()
 
-# Ejecutar ambos al mismo tiempo
-Thread(target=run_bot).start()
+# Ejecutar bot
+def start_bot():
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    loop.run_until_complete(run_bot())
+    loop.run_forever()
 
-run_web()
+# Hilo del bot
+threading.Thread(target=start_bot).start()
+
+# Flask
+port = int(os.environ.get("PORT", 10000))
+app_web.run(host="0.0.0.0", port=port)
