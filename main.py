@@ -9,7 +9,7 @@ import threading
 import asyncio
 import os
 
-TOKEN = os.getenv("TOKEN")
+TOKEN = ("8944541596:AAFzXDwacuLaIbdpfzWJTr5FoF7vixnU2I0")
 
 # Flask
 app_web = Flask(__name__)
