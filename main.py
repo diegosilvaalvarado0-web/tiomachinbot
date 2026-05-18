@@ -25,7 +25,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "✨ 🔥*GRUPO VIP*🔥 ✨\n\n"
         "Desbloquea +1,000 videos exclusivos 🔥\n\n"
         "Tenemos grupo de respaldo para que nunca pierdas tu acceso 🔑\n\n"
-        "🇵🇪 PERÚ: S/25 YAPE\n"
+        "🇵🇪 PERÚ: S/25\n"
         " 💜 Yape | 📲 Plin\n\n"
         "🌍 INTERNACIONAL: $ 10\n"
         "🅿️ PayPal | 💳 Visa | ❤️ Mastercard | 🟡 Binance Pay\n\n"
