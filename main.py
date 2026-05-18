@@ -24,12 +24,11 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     mensaje = (
         "✨ 🔥*GRUPO VIP*🔥 ✨\n\n"
         "Desbloquea +1,000 videos exclusivos 🔥\n\n"
-        "Tenemos grupo de respaldo para que nunca pierdas tu acceso 🔑\n\n"
         "🇵🇪 PERÚ: S/25\n"
         " 💜 Yape | 📲 Plin\n\n"
         "🌍 INTERNACIONAL: $ 10\n"
         "🅿️ PayPal | 💳 Visa | ❤️ Mastercard | 🟡 Binance Pay\n\n"
-        "👉 Envíame un mensaje a @TioMachin y te paso los datos para el pago al instante.\n"
+        "👉 Envíame un mensaje a @TioMachin y al instante te paso los datos para el pago.\n\n"
         "Unete al grupo gratuito https://t.me/+Csuc5Yv8puI0YzAx"
     )
 
