@@ -9,7 +9,7 @@ import threading
 import asyncio
 import os
 
-TOKEN = ("8944541596:AAFzXDwacuLaIbdpfzWJTr5FoF7vixnU2I0")
+TOKEN = ("8845810807:AAGaIFGBRC2RBS6-Rnb-Fkuws0mK2zGJdKM")
 
 # Flask
 app_web = Flask(__name__)
@@ -25,11 +25,12 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "✨ 🔥*GRUPO VIP*🔥 ✨\n\n"
         "Desbloquea +1,000 videos exclusivos 🔥\n\n"
         "Tenemos grupo de respaldo para que nunca pierdas tu acceso 🔑\n\n"
-        "🇵🇪 PERÚ:\n\n"
-        "S/25 YAPE 💜\n\n"
-        "🌍 INTERNACIONAL:\n\n"
-        "$10 PAYPAL 🤍\n\n"
-        "👉 Envíame un mensaje a @TioMachin y te paso los datos para el pago al instante."
+        "🇵🇪 PERÚ: S/25 YAPE\n"
+        " 💜 Yape | 📲 Plin\n\n"
+        "🌍 INTERNACIONAL: $ 10\n"
+        "🅿️ PayPal | 💳 Visa | ❤️ Mastercard | 🟡 Binance Pay\n\n"
+        "👉 Envíame un mensaje a @TioMachin y te paso los datos para el pago al instante.\n"
+        "Unete al grupo gratuito https://t.me/+Csuc5Yv8puI0YzAx"
     )
 
     video = open("IMG_2638.mp4", "rb")
